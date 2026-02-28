@@ -31,7 +31,7 @@
     "lint": "eslint",
     "lint:nibble": "eslint-nibble",
     "lint:inspect": "eslint-config-inspector",
-    "build:esm": "bun build ./src/index.ts --target node --outdir ./dist/esm --tsconfig tsconfig.json",
+    "build:esm": "bun build ./src/index.ts --target node --outdir ./dist/esm --tsconfig tsconfig.json --external electron --external chromium-bidi --external playwright-core --external @playwright/test",
     "build:cjs": "tsc -p tsconfig.node.json",
     "build:types": "tsc --emitDeclarationOnly --project tsconfig.json --outDir dist/types",
     "build": "bun run build:esm && bun run build:cjs && bun run build:types",
