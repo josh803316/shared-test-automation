@@ -2,6 +2,7 @@
   "extends": "@josh803316/shared-config/tsconfig.json",
   "exclude": ["dist/", "node_modules/"],
   "compilerOptions": {
+    "declaration": true,
     "types": ["@playwright/test", "vitest/globals"]
   }
 }
