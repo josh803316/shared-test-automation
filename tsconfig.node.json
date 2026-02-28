@@ -1,0 +1,5 @@
+{
+  "extends": "@josh803316/shared-config/tsconfig.node.json",
+  "include": ["src/**/*.ts"],
+  "exclude": ["dist/", "node_modules/", "e2e/**"]
+}

@@ -1,0 +1,69 @@
+{
+  "name": "@josh803316/shared-test-automation",
+  "version": "1.0.0",
+  "description": "Shared test infrastructure for @josh803316 projects (Playwright, Vitest, Bun test)",
+  "type": "module",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js",
+      "default": "./dist/esm/index.js"
+    },
+    "./playwright": {
+      "types": "./dist/types/playwright.d.ts",
+      "import": "./playwright.shared.config.ts",
+      "default": "./playwright.shared.config.ts"
+    },
+    "./vitest": {
+      "types": "./dist/types/vitest.d.ts",
+      "import": "./vitest.shared.config.ts",
+      "default": "./vitest.shared.config.ts"
+    }
+  },
+  "scripts": {
+    "prepare": "husky",
+    "fmt": "prettier -wu",
+    "compile": "tsc",
+    "lint": "eslint",
+    "lint:nibble": "eslint-nibble",
+    "lint:inspect": "eslint-config-inspector",
+    "build:esm": "bun build ./src/index.ts --target node --outdir ./dist/esm --tsconfig tsconfig.json",
+    "build:cjs": "tsc -p tsconfig.node.json",
+    "build:types": "tsc --emitDeclarationOnly --project tsconfig.json --outDir dist/types",
+    "build": "bun run build:esm && bun run build:cjs && bun run build:types",
+    "test:playwright": "bunx playwright test",
+    "test:playwright:ui": "bunx playwright test --ui",
+    "test:vitest": "bunx vitest",
+    "test:bun": "bun test"
+  },
+  "peerDependencies": {
+    "@playwright/test": "^1.46.0",
+    "vitest": "^2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@playwright/test": {"optional": true},
+    "vitest": {"optional": true}
+  },
+  "devDependencies": {
+    "@josh803316/shared-config": "^1.0.0",
+    "@playwright/test": "^1.46.0",
+    "@vitest/coverage-v8": "^2.0.0",
+    "vitest": "^2.0.0"
+  },
+  "trustedDependencies": [
+    "@josh803316/shared-config",
+    "esbuild",
+    "sharp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/josh803316/shared-test-automation.git"
+  },
+  "engines": {
+    "npm": "****** PLEASE USE 'bun install', NPM IS NOT SUPPORTED ******"
+  }
+}

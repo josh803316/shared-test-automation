@@ -1,0 +1,15 @@
+name: Release shared-test-automation
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    uses: josh803316/shared-ci-workflows/.github/workflows/semantic-release-shared-libs.yml@main
+    with:
+      repository: shared-test-automation
+      publish: 'true'
+      build-command: 'bun run build'
+    secrets: inherit

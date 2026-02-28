@@ -1,0 +1,7 @@
+{
+  "extends": "@josh803316/shared-config/tsconfig.json",
+  "exclude": ["dist/", "node_modules/"],
+  "compilerOptions": {
+    "types": ["@playwright/test", "vitest/globals"]
+  }
+}
