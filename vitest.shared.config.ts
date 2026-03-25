@@ -1,4 +1,4 @@
-import {defineConfig, type UserConfig} from 'vitest/config';
+import {defineConfig} from 'vitest/config';
 
 /**
  * Shared Vitest config for all @josh803316 projects.
@@ -15,7 +15,7 @@ import {defineConfig, type UserConfig} from 'vitest/config';
  *   }));
  */
 
-export const sharedVitestConfig: UserConfig = defineConfig({
+export const sharedVitestConfig = defineConfig({
   test: {
     // Globals (describe, it, expect, etc.) without importing
     globals: true,
