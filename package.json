@@ -45,14 +45,18 @@
     "vitest": "^2.0.0"
   },
   "peerDependenciesMeta": {
-    "@playwright/test": {"optional": true},
-    "vitest": {"optional": true}
+    "@playwright/test": {
+      "optional": true
+    },
+    "vitest": {
+      "optional": true
+    }
   },
   "devDependencies": {
-    "@josh803316/shared-config": "^1.0.0",
-    "@playwright/test": "^1.46.0",
-    "@vitest/coverage-v8": "^2.0.0",
-    "vitest": "^2.0.0"
+    "@josh803316/shared-config": "^2.0.0",
+    "@playwright/test": "^1.58.2",
+    "@vitest/coverage-v8": "^4.1.1",
+    "vitest": "^4.1.1"
   },
   "trustedDependencies": [
     "@josh803316/shared-config",
