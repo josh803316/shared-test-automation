@@ -3,12 +3,12 @@ import {expect} from '@playwright/test';
 
 /** Wait for a network response matching a URL pattern */
 export async function waitForResponse(page: Page, urlPattern: string | RegExp, timeout = 10_000) {
-  return page.waitForResponse(urlPattern, {timeout});
+  return await page.waitForResponse(urlPattern, {timeout});
 }
 
 /** Wait for navigation to a URL matching the given pattern */
 export async function waitForNavigation(page: Page, urlPattern: string | RegExp) {
-  return page.waitForURL(urlPattern);
+  return await page.waitForURL(urlPattern);
 }
 
 /** Take a named screenshot, saved to test-results/screenshots/ */

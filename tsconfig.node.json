@@ -3,6 +3,8 @@
   "include": ["src/**/*.ts"],
   "exclude": ["dist/", "node_modules/", "e2e/**"],
   "compilerOptions": {
-    "types": ["@playwright/test", "vitest/globals"]
+    "rootDir": "src",
+    "ignoreDeprecations": "6.0",
+    "types": ["node", "@playwright/test", "vitest/globals"]
   }
 }
