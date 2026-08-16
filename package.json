@@ -53,9 +53,10 @@
     }
   },
   "devDependencies": {
-    "@josh803316/shared-config": "^2.0.0",
+    "@josh803316/shared-config": "3.0.1",
     "@playwright/test": "^1.62.1",
     "@vitest/coverage-v8": "^4.1.10",
+    "typescript": "6.0.3",
     "vitest": "^4.1.10"
   },
   "trustedDependencies": [

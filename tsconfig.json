@@ -1,7 +1,9 @@
 {
-  "extends": "@josh803316/shared-config/tsconfig.json",
+  "extends": "@josh803316/shared-config/tsconfig/test.json",
   "exclude": ["dist/", "node_modules/"],
   "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "declaration": true,
     "types": ["@playwright/test", "vitest/globals"]
   }
