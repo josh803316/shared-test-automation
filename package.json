@@ -54,9 +54,9 @@
   },
   "devDependencies": {
     "@josh803316/shared-config": "^2.0.0",
-    "@playwright/test": "^1.58.2",
-    "@vitest/coverage-v8": "^4.1.1",
-    "vitest": "^4.1.1"
+    "@playwright/test": "^1.62.1",
+    "@vitest/coverage-v8": "^4.1.10",
+    "vitest": "^4.1.10"
   },
   "trustedDependencies": [
     "@josh803316/shared-config",
