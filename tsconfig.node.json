@@ -4,9 +4,6 @@
   "exclude": ["dist/", "node_modules/", "e2e/**"],
   "compilerOptions": {
     "rootDir": "src",
-    "module": "CommonJS",
-    "moduleResolution": "Node10",
-    "ignoreDeprecations": "6.0",
     "types": ["node", "@playwright/test", "vitest/globals"]
   }
 }
