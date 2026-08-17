@@ -26,11 +26,9 @@
   },
   "scripts": {
     "prepare": "husky",
-    "fmt": "prettier -wu",
+    "fmt": "biome format --write .",
     "compile": "tsc",
-    "lint": "eslint",
-    "lint:nibble": "eslint-nibble",
-    "lint:inspect": "eslint-config-inspector",
+    "lint": "biome lint .",
     "build:esm": "bun build ./src/index.ts --target node --outdir ./dist/esm --tsconfig tsconfig.json --external electron --external chromium-bidi --external playwright-core --external @playwright/test",
     "build:cjs": "tsc -p tsconfig.node.json",
     "build:types": "tsc --emitDeclarationOnly --project tsconfig.json --outDir dist/types",
@@ -53,10 +51,10 @@
     }
   },
   "devDependencies": {
-    "@josh803316/shared-config": "3.0.1",
+    "@josh803316/shared-config": "3.0.2",
     "@playwright/test": "^1.62.1",
     "@vitest/coverage-v8": "^4.1.10",
-    "typescript": "6.0.3",
+    "typescript": "7.0.2",
     "vitest": "^4.1.10"
   },
   "trustedDependencies": [

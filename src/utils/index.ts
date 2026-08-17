@@ -1,2 +1,2 @@
-export * from './helpers';
-export * from './configHelpers';
+export * from './helpers.js';
+export * from './configHelpers.js';
